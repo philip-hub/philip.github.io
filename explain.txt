@@ -1,0 +1,18 @@
+#Explain the basics of HTML
+  • Explain what tags are
+  • Explain that all tags open <> and end </>
+  • <!DOCTYPE html> tells the browser that this is a html file
+  • <html> begins our html code
+  • <head> is where we put all of our presets such as defining charsets and google fonts and style sheets.
+• <title> is where we put the tab text into
+• <body> is where we put in the code that is displayed on our website
+• Useful body tags to know
+  • <h1> through <h6>
+• 5 tags to know
+  • <p></p>
+  • <img src ="">
+  • <a href=""></a>
+  • <br>
+  • <iframe>
+
+Also check out
