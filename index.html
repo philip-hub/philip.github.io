@@ -9,17 +9,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Monda&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Hanalei&display=swap" rel="stylesheet">
+
 </head>
 
 <script src="script.js"></script>
 <body>
   
   <center>
-  <h1 id="philip">What I Do...<h1/>
-  <img src="images/philip.jpg" width="25%" height="25%"></img>
-  <p> Hello I am Philip and I am 17. I am passionate about engineering, computer science, and entrepreneurship</p>
-  <center>
+    
 
+ <div id="content">
+  <h1 id="philip">What I Do...</h1>
+  <img src="images/philip.jpg" width="33%" height="33%"></img>
+  <p id="type"></p>
+  <center>
+    <button onclick="home(menubar)">Home</button>
+    <button onclick="aboutme(menubar)">My Coding projects</button>
+</div>
 <a href="https://twitter.com/thephilippounds" target="_blank" class="fa fa-twitter"></a>
 <a href="https://www.linkedin.com/in/philip-pounds-4ab746188/"  class="fa fa-linkedin" target="_blank"></a>
 <a href="https://www.youtube.com/channel/UChn0YBTg6c6apBg4B92QPcA" class="fa fa-youtube" target="_blank"></a>
@@ -28,3 +37,41 @@
 </body>
 
 </html>
+
+    <script>
+
+    var i = 0;
+    var txt = 'Hello I am Philip. I am 17 and a junior in highschool. I am passionate about engineering, computer science, and entrepreneurship';
+    var speed = 50;
+
+    menubar = "<button onclick='home(menubar)'>Home</button><button onclick='aboutme(menubar)'>My Coding projects</button>"
+  
+  function aboutme(menu) {
+      console.log("Hello")
+      var text = "<h1 id='philip'>My Coding Projects...</h1><img src='https://avatars.githubusercontent.com/u/56984782?s=460&u=85193a345ee28defab20c68764ad40a2fafe34f1&v=4'width='33%' height='33%'><p>I build indie games, dynamic websites, and data science models go follow me on <a href='https://github.com/philip-hub' target='_blank'>Github</a></p>";
+      var text = text + menu;
+
+      document.getElementById("content").innerHTML = text;
+}
+
+function home(menu) {
+    var text =" <h1 id='philip'>What I Do...</h1><img src='images/philip.jpg' width='33%' height='33%'></img><p>Hello I am Philip. I am 17 and a junior in highschool. I am passionate about engineering, computer science, and entrepreneurship</p>"
+    var text = text + menu;
+    document.getElementById("content").innerHTML = text;
+    typeWriter()
+}
+
+
+  function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("type").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+  }
+
+  typeWriter()
+
+
+
+</script>
